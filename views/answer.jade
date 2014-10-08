@@ -1,0 +1,55 @@
+extends layout
+
+block content
+  h1= "Watson's Answer"
+ 
+  h2  "Question Details"
+  for result in results.question.qclasslist
+    p Value = #{result.value}  
+  p Focuslist = #{results.question.focuslist[0].value}
+  p Latlist =  #{results.question.latlist[0].value}
+  p
+  
+  
+  h2  "Evidence List"
+  for result in results.question.evidencelist
+    p Value = #{result.value}
+    p Text = #{result.text}
+    p Title = #{result.title}
+    p Copyright = #{result.copyright}
+    p TermsOfUse = #{result.termsOfUse}
+    p
+    p
+    
+  h2  "Synonym List"
+  for result in results.question.synonymList
+    p PartsOfSpeech = #{result.partOfSpeech}
+    p Value = #{result.value}
+    p Lemma = #{result.lemma}
+    p name = #{result.synSet[0].name}
+    p isChosen = #{result.synSet[0].synonym[0].isChosen}
+    p value = #{result.synSet[0].synonym[0].value}
+    p weight = #{result.synSet[0].synonym[0].weight}
+    p
+    p
+    
+  p Items = #{results.question.items}
+  p Status = #{results.question.status}
+  p Id = #{results.question.id}
+  p QuestionText = #{results.question.questionText}
+  p EvidenceRequestItems = #{results.question.evidenceRequest.items}
+  
+  h2 "Answers"
+  for result in results.question.answers
+    p Id = #{result.id}
+    p Text = #{result.text}
+    p Pipeline = #{result.pipeline}
+    p Confidence = #{result.confidence}
+  p
+  p
+  
+  h2 "Error Notifications
+  for result in results.question.errorNotifications
+    p ErrorNotifications =  #{result}
+  
+  

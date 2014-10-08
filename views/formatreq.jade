@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    h1= "Ask Watson a question and get a formatted response"
+    form#formAskWatson(name="ask",method="post",action="/formatreq")
+        input#inputDocId(type="text", placeholder="Question", name="query")
+        button#btnSubmit(type="submit") submit
+    p
+    p

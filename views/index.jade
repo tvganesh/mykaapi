@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  h2 Welcome to Watson's QAAPI
+  ul
+    li 
+      a(href='/question') Simple post synchronous query to Watson
+    li
+      a(href='/evidence') Ask Watson for responses based on evidence provided
+    li
+      a(href='/items') Ask Watson for number of responses to question
+    li
+      a(href='/format') Ask Watson and get a formatted response

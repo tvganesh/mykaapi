@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h1= "Ass Watson a question for  number answers"
+    form#formAskWatson(name="ask",method="post",action="/itemsreq")
+        input#inputDocId(type="text", placeholder="Question", name="query")
+        input#inputDocId(type="text", placeholder="Number of Items", name="items")
+        button#btnSubmit(type="submit") submit
+    p
+    p

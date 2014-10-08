@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h1= "Ask Watson a question based on evidence"
+    form#formAskWatson(name="ask",method="post",action="/evidencereq")
+        input#inputDocId(type="text", placeholder="Evidence", name="evidence")
+        input#inputDocId(type="text", placeholder="Items", name="items")
+        button#btnSubmit(type="submit") submit
+    p
+    p
